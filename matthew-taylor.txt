@@ -1,0 +1,235 @@
+https://codepen.io/matt-taylor/pen/YzPXBvq?editors=1100
+
+   1. What is Semantic HTML?
+        In semantic HTML, the tags used represent the logical divisions on the page. It divides it into sections, headers, footers, articles, and paragraphs, according to how it will be laid out on the page.
+
+   2. What is HTML used for?
+        HTML defines what a visitor to a web page sees, including what text is there and what it looks like (which is where CSS comes in.)
+
+   3. What is an attribute and where do we put it?
+        Attributes are parameters that tell the HTML something extra about the element/tag. An example attribute might be class or href in <a href="#" class="cool-link">
+
+   4. What is the h1 tag used for? How many times should I use it on a page?
+        H1 should be the main title of the page. It should appear only once.
+
+   5. Name two tags that have required attributes
+        img (needs src) and a (needs href)
+
+   6. What do we put in the head of our HTML document?
+        Styles, meta tags, links to style sheets
+
+   7. What is an id?
+        A unique identifier for an element. It can be used to style just that single element.
+
+   8. What elements can I add an id to?
+        All of them.
+
+   9. How many times can I use the same id on a page?
+        Just once.
+
+   10. What is a class?
+        A class is a group of elements that share styles.
+
+   11. What elements can I add a class to?
+        All of them.
+
+   12. How many times can I use the same class on a page?
+        As many times as you want.
+
+   13. How do I get my link to open in a new tab?
+        <a href="url" target="_blank">Link text</a>
+
+   14. What is the alt attribute used for?
+        The alt attribute defines an alternative text that describes an image to be read by screen readers or to be displayed if the link to the image is broken.
+
+   15. How do I reference an id?
+        #id-name {
+
+        }
+
+   16. What is the difference between a section and a div
+        A <section> groups its contents together. Semantically, it is a section of a page that might contain other things, or is perhaps a section of a smaller piece, such as an article. It can be used in styling, but it also separates its contents from their surroundings.
+        <div> doesn't really mean anything, at least semantically; it just means that the things within it share the style of the <div> or its class. It is primarily used to put a style across multiple elements.
+
+   17. What is CSS used for?
+        CSS tells the browser how the page should look, such as colors, fonts, text sizes, placement of objects, and shape of objects.
+
+   18. How to we select an element? Example - every h2 on the page
+        To select every instance of an element, you use the element tag on its own followed by curly braces within which you put the style, e.g.:
+          h2 {
+            color: red;
+          }
+
+   19. What is the difference between a class and an id? - Give me an example of when I might use each one
+        Class can refer to one or many objects on the page. An ID only refers to one single unique element. An element can be in multiple classes, but can only have one ID. Class is used to style all the objects labeled as such with the same style. ID is used when you want to target a single element with that style (perhaps to override a template engine) and will not affect the other elements of that type or class.
+
+   20. How do we select classes in CSS?
+        To select a class, put a period followed by the class name, e.g.:
+          .class-name {
+            font-size: 2em;
+          }
+
+   21. How do we select a p element with a single class of “human””?
+        p.human {
+
+        }
+
+   22. What is a parent child selector? When would this be useful?
+        A child element is an element that appears wholly within another element (the parent), e.g.:
+          <section>
+            <div>
+              <p>Paragraph</p>
+            </div>
+          </section>
+        The div and p are children of the section. P is a child of div.
+        The parent/child selector specifies both the parent and the child and defines the style for the child, allowing you to focus in on elements that are in particular places on the page.
+          section div p {
+            color: #FF9955;
+          }
+        This will only style paragraphs within a div within a section, rather than styling all paragraphs.
+
+   23. How do you select all links within a div with the class of sidebar?
+        div.sidebar a {
+
+        }
+
+   24. What is a pseudo selector?
+        Pseudo classes are referenced when special states of an element have different styles, e.g.:
+          a:visited {
+            /* style for links that have already been visited */
+          }
+
+          a:hover {
+            /* style for a link when the mouse cursor hovers over it */
+          }
+
+          p:first-child {
+            /* style for any paragraph that is the first paragraph within any parent element */
+          }
+
+          ul li::before {
+            content: '*'; /* insert an * before ever list item in an unordered list */
+          }
+
+          p.special::first-letter {
+            /* style for the first letter of every paragraph with the class 'special' */
+          }
+
+   25. What do we use the change the spacing between lines?
+        line-height: 1.5;
+
+   26. What do we use to change the spacing between letters?
+        letter-spacing: 2px;
+
+   27. What do we use to to change everything to CAPITALS? lowercase? Capitalize?
+        text-transform: uppercase; /* all caps */
+        text-transform: lowercase; /* all lowercase */
+        text-transform: capitalize; /* initial caps */
+
+   28. How do I add a 1px border around my div that is dotted and black?
+        div.class {
+          border: 1px dotted black;
+        }
+
+   29. How do I select everything on the page?
+        * {
+
+        }
+
+   30. How do I write a comment in CSS?
+        /* comment goes here,
+            between the slash+asterisk
+            and the asterisk+slash,
+            one line or many  */
+
+   31. How do I find out what file I am in, when I am using the command line?
+        To find your current working directory, use the command 'pwd'.
+
+   32. Using the command line - how do I see a list of files/folders in my current folder?
+        ls
+
+   33. How do I remove a file via the command line? Why do I have to be careful with this?
+        rm filename.ext
+        rm -r folder-name
+        It's really easy to delete things you need or your operating system needs by mistyping your rm command or making it too broad, e.g.:
+          rm -rf /*
+
+   34. Why should I use version control?
+        Version control allows you to track your changes and revert to an earlier version if necessary.
+
+   35. How often should I commit to github?
+        Every time you edit files and want to save your changes.
+
+   36. What is the command we would use to push our repo up to github?
+        First time:
+          git push -u origin branch-name
+        After that:
+          git push
+
+   37. Walk me through Lambda's git flow.
+        1) fork the Lambda repo to a student repo (hereafter 'SR')
+        2) add TL as a collaborator to the SR
+        3) clone SR to local machine
+        4) make a new branch 'git checkout -b firstname-lastname'
+        5) make changes to the files as per the instructions
+        6) add any new files to the SR 'git add .'
+        7) commit changes 'git commit -m "commit message saying what changed"'
+        8) push the changes to github
+        9) open a pull request on the SR comparing the master branch of the SR to the new branch and add the TL as a reviewer
+        10) put the link to the pull request in the Module Retrospective
+
+Stretch Questions
+
+   1. What is the difference between an inline element and a block element?
+        You can put inline and block elements inside a block element, but you can't put block elements within an inline element.
+        Inline elements (such as <span> and <a>) do not break the flow of writing; block elements (such as <p> and <section>) do.
+
+   2. What happens when an element is positioned absolutely?
+        An absolute positioned element is positioned relative to its closest ancestor (parent, grandparent element, etc) that has a position other than static, or is positioned relative to the document body if no such ancestor is found.
+
+   3. How do I make an element take up only the amount of space it needs but also have the ability to give it a width?
+        You can set the max-width property, which limits the width.
+          .keep-it-small {
+            max-width: 200px;
+          }
+
+   4. Name 3 elements that are display block by default, 2 elements that are display inline by default and 1 element that is display inline-block by default
+        display: block:
+          <article>
+          <div>
+          <h1>
+        display: inline:
+          <span>
+          <a>
+        display: inline-block:
+          <button>
+
+   5. In your own words, explain the box model. What is the fix for the box model?
+        The box model defines every element as existing within a box with multiple layers. Those layers are, from the outside in:
+          margin
+          border
+          padding
+          content
+        The size of the margin, border, and padding default to 0, but can be increased in CSS.
+        Unfortunately, the box model does not work well with responsive design (and calculating widths can cause headache for designers), so we need a new approach. One option is 'box-sizing: border-box' which puts the border and padding within the specified width. Adding this code to your style sheet will utilize that option by making everything use the border-box sizing method:
+          html {
+            box-sizing: border-box;
+          }
+
+          *, *:before, *:after {
+            box-sizing: inherit;
+          }
+
+        Using this method makes calculating size of elements more intuitive. Then using percentage widths instead of pixel widths will make the site more responsive.
+        If you need to use border-box box-sizing with older browsers, try:
+          html {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+          }
+
+          *, *:before, *:after {
+            -webkit-box-sizing: inherit;
+            -moz-box-sizing: inherit;
+            box-sizing: inherit;
+          }
