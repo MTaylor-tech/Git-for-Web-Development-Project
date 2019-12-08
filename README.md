@@ -33,13 +33,13 @@ Stretch Review questions:
     4. Name 3 elements that are diplay block by default, 2 elements that are display inline by default and 1 element that is display inline-block by default
     5. In your own words, explain the box model. What is the fix for the box model?
 ### Stretch Git Tasks
-- [ ] While the processes learned here will set you up to be successful in most situations, they are just the tip of the iceberg in learning Git. Independently research the following topics to learn more about Git.
+- [x] While the processes learned here will set you up to be successful in most situations, they are just the tip of the iceberg in learning Git. Independently research the following topics to learn more about Git.
   - [x] Research and understand what a `merge conflict` is and how to resolve it.
         **Done. This happens when merging branches that have incompatible commits, and you need to decide which changes to keep. It can sometimes be resolved using GitHub's conflict editor, though more serious conflicts must be resolved on a local clone of the repo.**
   - [x] Research the Git commands `pull`, `rebase`, `merge`. These commands will allow you to bring in changes that other developers push to the master branch.
         **Done. `pull` gets the changes from the remote repository and adds them to the local store. `rebase` is used to move the main codebase to a parallel branch, then merge in all the changes that were made since that branch was made. `merge` combines the changes from two branches into one branch, typically used to bring changes from a daughter branch into the master branch.**
-  - [ ] Research the Git commands `reset `, `revert`, `clean`. These commands will allow you to go back and amends previous commits you have made.
-        **_Attempted._ I had a lot of trouble understanding these commands, but I'm going to keep searching for resources to help me learn them.**
+  - [x] Research the Git commands `reset `, `revert`, `clean`. These commands will allow you to go back and amends previous commits you have made.
+        **Done. `reset` moves the pointer back to a previous commit. `revert` undoes changes introduced by a commit by creating an inverse of that commit. `clean` gets rid of untracked files within the repository directory.**
 
 - [x] Research and set up a Graphical User Interface (GUI) Git console. **Done: GitHub Desktop**
 
