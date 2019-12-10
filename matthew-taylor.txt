@@ -192,6 +192,7 @@ Stretch Questions
           .keep-it-small {
             max-width: 200px;
           }
+        Upon reading this again, I think the question is asking for 'display: inline-block', which is a display style that allows the setting of width (like block), but generally will only take up the amount of space it needs (like inline). This could easily be combined with 'max-width', and an inline-block element would be a good choice to set max-width on.
 
    4. Name 3 elements that are display block by default, 2 elements that are display inline by default and 1 element that is display inline-block by default
         display: block:
